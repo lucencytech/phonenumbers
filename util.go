@@ -1132,7 +1132,7 @@ func FormatByPattern(number *PhoneNumber,
 		// If no pattern above is matched, we format the number as a whole.
 		formattedNumber.WriteString(nationalSignificantNumber)
 	} else {
-		var numFormatCopy *NumberFormat
+		numFormatCopy := formattingPattern
 		// Before we do a replacement of the national prefix pattern
 		// $NP with the national prefix, we need to copy the rule so
 		// that subsequent replacements for different numbers have the
